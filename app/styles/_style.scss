@@ -1,0 +1,42 @@
+body {
+	font-family: $font-2;
+}
+
+.paths {
+	background-color: #fff;
+	padding: 20px;
+	.image {
+		background-position: top center;
+		background-repeat: no-repeat;
+		background-size: contain;
+		margin: 0 0 20px;
+		height: 200px;
+	}
+}
+
+.path {
+	.top {
+		background-color: #fff;
+		position: relative;
+		.image {
+			background-position: top center;
+			background-repeat: no-repeat;
+			background-size: contain;
+			margin: 0 0 20px;
+			height: 624px;
+		}
+		h1 {
+			background: rgba(255, 255, 255, 0.75);
+			bottom: 0;
+			padding: 20px;
+			position: absolute;
+			text-align: center;
+			width: 100%;
+		}
+	}
+}
+
+#map {
+    height: 420px;
+    width: 1122px;
+}

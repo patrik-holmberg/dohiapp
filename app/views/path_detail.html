@@ -1,0 +1,35 @@
+<div class="path detail" ng-controller="apiCtrl">
+	<div class="top">
+		<div class="image" style="background-image: url({{paths.paths[pathId].path_image}})"></div>
+		<h1 class="heading"><strong>{{paths.paths[pathId].path_name}}</strong></h1>
+	</div>
+	
+    <div class="tabs-full">
+        <ul class="nav">
+            <li class="active">Tab 1</li>
+            <li>Tab 2</li>
+            <li>Tab 3</li>
+        </ul>
+        <section class="active"> 
+            <p><strong>Kort beskrivning:</strong> {{paths.paths[pathId].path_info}}</p>
+            <p><strong>Tid (antal timmar):</strong> {{paths.paths[pathId].path_time}}</p>
+            <p><strong>Längd:</strong> {{paths.paths[pathId].path_length}} km</p>
+        </section>
+        <section> 
+            xxxxx
+        </section>
+        <section> 
+            asdsad
+        </section>
+    </div>
+	
+	<div class="places" ng-repeat="item in paths.paths[pathId].places">
+		{{item.place_name}}---
+		{{item.place_position.lat}}---
+		{{item.place_position.lng}}
+	</div>
+</div>
+
+<div ng-app="mapsApp" ng-controller="MapCtrl">
+    <div id="map"></div>
+</div>

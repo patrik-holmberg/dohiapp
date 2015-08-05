@@ -1,0 +1,15 @@
+<div ng-controller="apiCtrl">
+	<p>{{paths.bundle_info}}</p>
+</div>
+
+<div class="row flow-columns" ng-controller="apiCtrl">
+	<div class="paths span-4" ng-repeat="path in paths.paths">
+		<div class="image" style="background-image: url({{path.path_image}})"></div>
+		<div class="content">
+			<p><strong>Vandringsled:</strong> {{path.path_name}}</p>
+			<p><strong>Kort info:</strong> {{path.path_info}}</p>
+			<p><strong>Längd:</strong> {{path.path_length}} km</p>
+			<p><strong>Tid:</strong> {{path.path_time}} h</p>
+		</div>
+	</div>
+</div>
