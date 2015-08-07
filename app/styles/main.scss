@@ -15,6 +15,31 @@ $fa-font-path: "font-awesome/fonts/";
   }
 }
 
+@media (max-width: $breakpoint-3) {
+  .intro h2 {
+    color: #fff;
+  }
+  .intro {
+	background: url("/images/intro.jpg") no-repeat fixed center top / cover transparent !important;
+  }
+}
+
+@media (max-width: $breakpoint-1) {
+  .row {
+    margin-left: 0;
+  }
+  .intro {
+	min-height: 74vh;
+  }
+  .intro h2 {
+    color: #fff;
+    font-size: 2.5em !important;
+  }
+  .intro img {
+	width: 150px;
+  }
+}
+
 
 /******************************************************************
 Skeleton

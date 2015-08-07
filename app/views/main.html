@@ -1,13 +1,6 @@
-<div id="readmore" ng-controller="HeaderCtrl">
-	<div ng-repeat="item in items">
-		<p><a ng-class="{ active: isActive('{{item.href}}') }" class="button-string" href="#{{pathLoc}}/about">{{item.string}}</a></p>
-	</div>
-</div>
-
 <div class="container" id="main" ng-controller="apiCtrl">
-	<p class="welcome"><img src="/images/icon-mountain.png" /></p>
 	<!-- Bundle info -->
-    <p class="welcome">{{paths.bundle_info}}</p>
+    <p class="plaintext">{{paths.bundle_more_info}}</p>
     <!-- Rows -->
 	<div class="row flow-columns">
 		<div class="paths span-4" ng-repeat="(key, item) in paths.paths">

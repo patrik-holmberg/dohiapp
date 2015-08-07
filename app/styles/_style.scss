@@ -39,30 +39,33 @@ blockquote {
 .button-string.active {
 	display: block;
 }
-.welcome {
+.plaintext {
+	color: #000;
 	font-size: 1.5em;
 	margin: 0;
-	padding: 1em 0;
+	padding: 3em 0 1em;
 	text-align: center;
-	text-transform: uppercase;
 }
 
 /* MENU */
 .flyout-container.active {
   left: 0;
 }
+.app-nav li:hover > a,
+.app-nav li:hover > a.active {
+	background: #707070;
+	color: #fff;
+}
 .app-nav li a.active,
 .flyout-container > ul > li > a.active {
-	color: red;
+	color: #fff;
 }
-#readmore {
-	.button-string {
-		display: none;
-		text-align: center;
-	}
-	.button-string.active {
-		display: block;
-	}
+.flyout-container > ul > li > a,
+.flyout-container ul li:hover > a {
+	border-left-color: #707070;
+}
+.flyout-container > ul > li:hover > a {
+	background: #707070;
 }
 
 /* ROWS */
@@ -70,7 +73,7 @@ blockquote {
 	background: #fff;
 	margin: 1em 0;
 	a {
-		color: #707070;
+		color: #000;
 		font-size: 16px;
 		text-transform: uppercase;
 		text-decoration: none;
@@ -82,7 +85,7 @@ blockquote {
 		.content {
 			padding: 20px;
 			text-align: center;
-		}	
+		}
 	}
 }
 
@@ -100,6 +103,7 @@ blockquote {
 		}
 		h1 {
 			background: #fff;
+			color: #000;
 			bottom: 0;
 			padding: 20px;
 			position: absolute;
