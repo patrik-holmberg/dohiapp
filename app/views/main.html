@@ -1,15 +1,20 @@
-<div ng-controller="apiCtrl">
-	<p>{{paths.bundle_info}}</p>
+<div id="readmore" ng-controller="HeaderCtrl">
+	<div ng-repeat="item in items">
+		<p><a ng-class="{ active: isActive('{{item.href}}') }" class="button-string" href="#{{pathLoc}}/about">{{item.string}}</a></p>
+	</div>
 </div>
 
-<div class="row flow-columns" ng-controller="apiCtrl">
-	<div class="paths span-4" ng-repeat="path in paths.paths">
-		<div class="image" style="background-image: url({{path.path_image}})"></div>
-		<div class="content">
-			<p><strong>Vandringsled:</strong> {{path.path_name}}</p>
-			<p><strong>Kort info:</strong> {{path.path_info}}</p>
-			<p><strong>Längd:</strong> {{path.path_length}} km</p>
-			<p><strong>Tid:</strong> {{path.path_time}} h</p>
+<div class="container" id="main" ng-controller="apiCtrl">
+	<p class="welcome"><img src="/images/icon-mountain.png" /></p>
+	<!-- Bundle info -->
+    <p class="welcome">{{paths.bundle_info}}</p>
+    <!-- Rows -->
+	<div class="row flow-columns">
+		<div class="paths span-4" ng-repeat="(key, item) in paths.paths">
+			<a ng-href="#{{pathLoc}}/path/{{key}}">
+				<div class="image" style="background-image: url({{item.path_image}})"></div>
+				<div class="content"><p>{{item.path_name}}</p></div>
+			</a>
 		</div>
 	</div>
 </div>

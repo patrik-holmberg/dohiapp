@@ -1,42 +1,152 @@
 body {
-	font-family: $font-2;
+	font-family: 'Signika', sans-serif;
+	font-size: 14px;
 }
 
-.paths {
-	background-color: #fff;
-	padding: 20px;
-	.image {
-		background-position: top center;
-		background-repeat: no-repeat;
-		background-size: contain;
-		margin: 0 0 20px;
-		height: 200px;
+blockquote {
+	margin: 20px 0;
+}
+
+/* INTRO */
+.intro {
+  background: url('/images/intro.jpg') no-repeat center -150px fixed;
+  background-size: cover;
+  width: 100vw;
+  min-height: 77vh;
+  text-align: center;
+  color: #000;
+  h2 {
+	font-size: 4.3em;
+	font-weight: 700;
+    text-transform: uppercase;
+  }
+  .header {
+    margin: 0 auto;
+    padding: 10vh 0;
+  }
+}
+
+/* MAIN */
+.logo a {
+	font-size: 16px;
+	text-transform: uppercase;
+}
+.button-string {
+	display: none;
+	text-align: center;
+	text-transform: uppercase;
+}
+.button-string.active {
+	display: block;
+}
+.welcome {
+	font-size: 1.5em;
+	margin: 0;
+	padding: 1em 0;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+/* MENU */
+.flyout-container.active {
+  left: 0;
+}
+.app-nav li a.active,
+.flyout-container > ul > li > a.active {
+	color: red;
+}
+#readmore {
+	.button-string {
+		display: none;
+		text-align: center;
+	}
+	.button-string.active {
+		display: block;
 	}
 }
 
+/* ROWS */
+.paths {
+	background: #fff;
+	margin: 1em 0;
+	a {
+		color: #707070;
+		font-size: 16px;
+		text-transform: uppercase;
+		text-decoration: none;
+		.image {
+			background-repeat: no-repeat;
+			background-size: cover;
+			height: 200px;
+		}
+		.content {
+			padding: 20px;
+			text-align: center;
+		}	
+	}
+}
+
+/* PATH DETAIL */
 .path {
+	position: relative;
 	.top {
-		background-color: #fff;
+		background: #fff;
 		position: relative;
 		.image {
 			background-position: top center;
 			background-repeat: no-repeat;
-			background-size: contain;
-			margin: 0 0 20px;
+			background-size: cover;
 			height: 624px;
 		}
 		h1 {
-			background: rgba(255, 255, 255, 0.75);
+			background: #fff;
 			bottom: 0;
 			padding: 20px;
 			position: absolute;
 			text-align: center;
 			width: 100%;
+			span {
+				font-weight: 400;
+			}
+		}
+	}
+	.content {
+		background: #707070;
+		left: 50px;
+		padding: 20px;
+		position: absolute;
+		top: 50px;
+		width: auto;
+		p {
+			color: #fff;
+			font-size: 40px;
+			line-height: 0;
 		}
 	}
 }
 
-#map {
-    height: 420px;
-    width: 1122px;
+/* GOOGLE MAPS */
+.gm {
+	position: relative;
+	#map {
+	    height: 320px;
+	    margin: 0 0 10px;
+		.title {
+			margin: 0;
+			text-transform: uppercase;
+		}
+		.image {
+			width: 200px;
+		}
+	}
+	.shortcut {
+		background: rgba(255, 255, 255, 0.75);
+		bottom: 0;
+		padding: 5px;
+		position: absolute;
+		width: 100%;
+		a {
+			text-transform: uppercase;
+		}
+	}
 }

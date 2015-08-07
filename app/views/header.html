@@ -1,25 +1,27 @@
-<div class="header">
-  <div class="navbar navbar-default" role="navigation">
-    <div class="container">
-      <div class="navbar-header">
-
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-
-        <a class="navbar-brand" href="#/">Dohi App</a>
+<div ng-controller="HeaderCtrl">
+  <header class="app-header">
+      <div class="container">
+          <div class="header-wrapper">
+              <!-- Logo -->
+              <div class="logo">
+                  <a href="/#/"><img src="/images/logo-mountain.png" /> Hiking trails</a>
+              </div>
+              <!-- Main-Nav -->
+              <nav class="app-nav" id="app-nav">
+                  <ul>
+                      <li ng-repeat="item in items">
+                        <a ng-class="{ active: isActive('{{item.href}}') }" ng-href="/#{{item.href}}" ng-bind="item.name"></a>
+                      </li>
+                  </ul>
+              </nav>
+          </div>
       </div>
+  </header>
 
-      <div class="collapse navbar-collapse" id="js-navbar-collapse">
+  <!-- Scroll to top icon-->
+  <a class="icon-border scroll-top" href="#site-content">
+      <i class="fa fa-angle-up"></i>
+  </a>
 
-        <ul class="nav navbar-nav">
-          <li class="active"><a href="#/">Start</a></li>
-          <li><a ng-href="#/about">Läs mer</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
+  <menu-flyout></menu-flyout>
 </div>

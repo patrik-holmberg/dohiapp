@@ -1,0 +1,22 @@
+<div class="container" id="main">
+	<div class="path" ng-controller="apiCtrl">
+		<div class="top">
+			<div class="image" style="background-image: url({{paths.paths[pathId].path_image}})"></div>
+			<h1 class="heading"><strong>{{paths.paths[pathId].path_name}} <span>- {{paths.paths[pathId].path_info}}</span></strong></h1>
+		</div>
+		<div class="content">
+			<p><i class="fa fa-clock-o"></i> {{paths.paths[pathId].path_time}} h</p>
+			<p><i class="fa fa-compass"></i> {{paths.paths[pathId].path_length}} km</p>
+		</div>
+	</div>
+	
+	<div class="gm" ng-app="mapsApp" ng-controller="MapCtrl">
+	    <div id="map"></div>
+	    <div class="shortcut">
+		    <div class="span-0"><i class="fa fa-hand-o-right"></i></div>
+		    <div class="span-0" ng-repeat="marker in markers | orderBy : 'title'">
+		        <a href="#" ng-click="openInfoWindow($event, marker)">{{marker.title}}</a>
+		    </div>
+	    </div>
+	</div>
+</div>
